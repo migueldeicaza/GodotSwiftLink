@@ -209,8 +209,12 @@ typedef struct {
 } godot_method_bind;
 
 godot_method_bind GDAPI *godot_method_bind_get_method(const char *p_classname, const char *p_methodname);
-void GDAPI godot_method_bind_ptrcall(godot_method_bind *p_method_bind, godot_object *p_instance, const void **p_args, void *p_ret);
+//void GDAPI godot_method_bind_ptrcall(godot_method_bind *p_method_bind, void *p_instance, const void **p_args, void *p_ret);
+//void GDAPI godot_method_bind_ptrcall(int a, int b, int c, int d);
 godot_variant GDAPI godot_method_bind_call(godot_method_bind *p_method_bind, godot_object *p_instance, const godot_variant **p_args, const int p_arg_count, godot_variant_call_error *p_call_error);
+
+void godot_method_bind_ptrcall(godot_method_bind *p_method_bind, const void *p_instance, const void **p_args, void *p_ret);
+
 ////// Script API
 
 typedef struct godot_gdnative_api_version {
