@@ -10,5 +10,5 @@
 
 #include <gdnative/gdnative.h>
 
-
+void miguel_proxy (godot_method_bind *p_method_bind, const void *p_instance, const void **p_args, void *p_ret);
 #endif /* File_h */

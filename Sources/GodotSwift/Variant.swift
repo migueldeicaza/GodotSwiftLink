@@ -42,7 +42,7 @@ public class Variant {
     }
     
     public init (_ value: Swift.String) {
-        var str = String (value)
+        let str = String (value)
         godot_variant_new_string(&_godot_variant, &str._godot_string)
     }
     
@@ -107,7 +107,7 @@ public class Variant {
     }
 
     public init (_ value: Object) {
-        godot_variant_new_object(&_godot_variant, &value._godot_object)
+        godot_variant_new_object(&_godot_variant, &value.handle)
     }
 
     public init (_ value: Dictionary) {
@@ -154,6 +154,3 @@ public class Variant {
     }
 }
 
-public class Object {
-    var _godot_object: Int
-}
