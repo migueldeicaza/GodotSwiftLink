@@ -15,6 +15,83 @@ public class Variant {
     {
         _godot_variant = native
     }
+
+    public enum Kind: Int {
+    	case nilKind = 0
+        // atomic types
+        case bool
+        case int
+        case float
+        case string
+
+        // math types
+        case vector2
+        case vector2i
+        case rect2
+        case rect2i
+        case vector3
+        case vector3i
+        case transform2d
+        case plane
+        case quat
+        case aabb
+        case basis
+        case transform
+
+        // misc types
+        case color
+        case stringCame
+        case nodePath
+        case rid
+        case object
+        case callable
+        case signal
+        case dictionary
+        case array
+
+        // typed arrays
+        case packedByteArray
+        case packedInt32Array
+        case packedInt64Array
+        case packedFloat32Array
+        case packedFloat64Array
+        case packedStringArray
+        case packedVector2Array
+        case packedVector3Array
+        case packedColorArray
+    }
+
+    public enum Operator: Int {
+        case equal
+        case notEqual
+        case less
+        case lessEqual
+        case greater
+        case greaterEqual
+
+        case add
+        case subtract
+        case multiply
+        case divide
+        case negate
+        case positive
+        case module
+
+        case shiftLeft
+        case shiftRight
+        case bitAnd
+        case bitOr
+        case bitXor
+        case bitNegate
+
+        case and
+        case or
+        case xor
+        case not
+
+        case `in`
+        case max
+    }
     
     public init ()
     {

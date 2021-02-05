@@ -22,7 +22,8 @@ let package = Package(
             name: "Godot"),
         .target(
             name: "GodotSwift",
-            dependencies: ["Godot"]),
+            dependencies: ["Godot"],
+	    swiftSettings: [.unsafeFlags (["-suppress-warnings"])]),
         .testTarget(
             name: "GodotSwiftTests",
             dependencies: ["GodotSwift"]),
